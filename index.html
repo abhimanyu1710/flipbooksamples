@@ -1,54 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flipbook Samples</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #f5f7fb;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-        .container {
-            background: #ffffff;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-            text-align: center;
-        }
-        h1 {
-            margin-bottom: 30px;
-        }
-        a {
-            display: block;
-            margin: 12px 0;
-            padding: 12px 20px;
-            text-decoration: none;
-            background: #007bff;
-            color: #fff;
-            border-radius: 8px;
-            transition: 0.3s;
-        }
-        a:hover {
-            background: #0056b3;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flipbook Samples</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #f4f7fb, #e9eef5);
+      color: #1f2937;
+    }
+
+    .wrapper {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 50px 20px;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .header h1 {
+      margin: 0 0 10px;
+      font-size: 36px;
+      color: #111827;
+    }
+
+    .header p {
+      margin: 0;
+      font-size: 16px;
+      color: #6b7280;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+    }
+
+    .thumb {
+      height: 190px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      text-align: center;
+      font-size: 22px;
+      font-weight: bold;
+      color: white;
+    }
+
+    .thumb.option1 {
+      background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    }
+
+    .thumb.option2 {
+      background: linear-gradient(135deg, #7c3aed, #5b21b6);
+    }
+
+    .thumb.option3 {
+      background: linear-gradient(135deg, #ef4444, #b91c1c);
+    }
+
+    .content {
+      padding: 20px;
+    }
+
+    .content h2 {
+      margin: 0 0 8px;
+      font-size: 20px;
+      color: #111827;
+    }
+
+    .content p {
+      margin: 0 0 16px;
+      font-size: 14px;
+      color: #6b7280;
+      line-height: 1.5;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 16px;
+      border-radius: 8px;
+      background: #111827;
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 40px;
+      color: #6b7280;
+      font-size: 13px;
+    }
+  </style>
 </head>
 <body>
+  <div class="wrapper">
+    <div class="header">
+      <h1>Flipbook Samples</h1>
+      <p>Please review the options below and open the preferred sample.</p>
+    </div>
 
-<div class="container">
-    <h1>Flipbook Samples</h1>
+    <div class="grid">
+      <a class="card" href="./flipbookSample1.html">
+        <div class="thumb option1">Option 1<br />HTML Preview</div>
+        <div class="content">
+          <h2>Option 1 (HTML)</h2>
+          <p>Interactive HTML-based sample for review.</p>
+          <span class="btn">Open Option 1</span>
+        </div>
+      </a>
 
-    <a href="flipbookSample1.html">Option 1 (HTML)</a>
-    <a href="flipbookSample2.html">Option 2 (HTML)</a>
-    <a href="Generative_AI.pdf" target="_blank">Option 3 (PDF)</a>
+      <a class="card" href="./flipbookSample2.html">
+        <div class="thumb option2">Option 2<br />HTML Preview</div>
+        <div class="content">
+          <h2>Option 2 (HTML)</h2>
+          <p>Alternative HTML-based sample with a separate layout.</p>
+          <span class="btn">Open Option 2</span>
+        </div>
+      </a>
 
-</div>
+      <a class="card" href="./Generative_AI.pdf" target="_blank">
+        <div class="thumb option3">Option 3<br />PDF Preview</div>
+        <div class="content">
+          <h2>Option 3 (PDF)</h2>
+          <p>Open the PDF version in a new tab for review.</p>
+          <span class="btn">Open PDF</span>
+        </div>
+      </a>
+    </div>
 
+    <div class="footer">
+      Shared for review purposes.
+    </div>
+  </div>
 </body>
 </html>
